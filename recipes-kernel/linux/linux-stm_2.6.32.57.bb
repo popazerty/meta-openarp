@@ -1,7 +1,7 @@
 require recipes-kernel/linux/linux-stm.inc
 
 STM_PATCH_STR = "0210"
-PR = "r3"
+PR = "r4"
 PV = "${LINUX_VERSION}-stm24-${STM_PATCH_STR}"
 
 DESCRIPTION = "Linux kernel from stlinux"
