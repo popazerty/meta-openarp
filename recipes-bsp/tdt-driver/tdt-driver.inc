@@ -13,7 +13,7 @@ SRCREV = "54b4849686bcc6a8834c1ed3f3e92994ba1e9d2a"
 
 # using seifes tdt drivers because this has less overhead
 SRC_URI = " \
-	git://gitorious.org/neutrino-mp/tdt-driver.git \
+	https://code.google.com/p/arp-driver/ \
         file://COPYING \
         file://aotom_udev.rules \
 	file://${MACHINE}/tdt-driver_load.conf \

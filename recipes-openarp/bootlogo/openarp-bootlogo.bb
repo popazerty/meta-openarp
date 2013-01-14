@@ -1,4 +1,4 @@
-DESCRIPTION = "OpenPLi bootlogo"
+DESCRIPTION = "OpenAR-P bootlogo"
 SECTION = "base"
 PRIORITY = "required"
 MAINTAINER = "PLi team"
