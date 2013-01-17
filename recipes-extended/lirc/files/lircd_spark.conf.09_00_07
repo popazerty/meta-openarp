@@ -1,0 +1,157 @@
+begin remote
+
+  name  rc08(HOF-55C)
+  bits           16
+  flags SPACE_ENC|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  header       9011  4455
+  one           585  1656
+  zero          585   541
+  ptrail        585
+  repeat       9011  2233
+  pre_data_bits   16
+  pre_data       0x44BB
+  gap          107670
+  toggle_bit_mask 0x0
+  
+# Golden Media  990
+
+ begin codes
+          KEY_POWER                    0xB24D		# POWER
+          KEY_AUX                      0xC837		# TV/SAT
+          KEY_VIDEO                    0x52AD		# V.FORMAT
+          KEY_TIME                     0x12ED		# TIME
+          KEY_MUTE                     0x22DD		# MUTE
+          KEY_T                        0xB04F		# TimeShift
+          KEY_AUDIO                    0x20DF		# PROG2
+          KEY_HELP                     0xF00F		# F1
+          KEY_S                        0x28D7		# PROG1
+          KEY_1                        0x827D		# 1BUTTON
+          KEY_2                        0xC03F		# 2BUTTON
+          KEY_3                        0x42BD		# 3BUTTON
+          KEY_4                        0xA25D		# 4BUTTON
+          KEY_5                        0xE01F		# 5BUTTON
+          KEY_6                        0x629D		# 6BUTTON
+          KEY_7                        0xAA55		# 7BUTTON
+          KEY_8                        0xE817		# 8BUTTON
+          KEY_9                        0x6A95		# 9BUTTON
+          KEY_TV2                      0x9A65		# TV/RADIO
+          KEY_0                        0xD827		# 0BUTTON
+          KEY_BACK                     0x5AA5		# RECALL
+          KEY_SAT                      0xD02F		# SAT
+          KEY_FAVORITES                0x08F7		# FAV
+          KEY_VOLUMEDOWN               0x4AB5		# VOL-
+          KEY_VOLUMEUP                 0x728D		# VOL+
+          KEY_PAGEDOWN                 0x8877		# PAGE-
+          KEY_PAGEUP                   0x48B7		# PAGE+
+          KEY_INFO                     0xE21D		# INFO
+          KEY_EPG                      0xDA25		# EPG
+          KEY_MENU                     0xA05F		# MENU
+          KEY_HOME                     0xD22D		# EXIT
+          KEY_FIND                     0xCA35		# FIND
+          KEY_RECORD                   0x10EF		# REC
+          KEY_UP                       0x609F		# UP
+          KEY_DOWN                     0x50AF		# DOWN
+          KEY_LEFT                     0xC23D		# LEFT
+          KEY_RIGHT                    0x807F		# RIGHT
+          KEY_OK                       0x40BF		# OK
+          KEY_RED                      0xFA05		# RED
+          KEY_GREEN                    0x7887		# GREEN
+          KEY_YELLOW                   0x3AC5		# YELLOW
+          KEY_BLUE                     0xB847		# BLUE
+          KEY_REWIND                   0x2AD5		# REWIND
+          KEY_PLAY                     0x8A75		# PLAY
+          KEY_FASTFORWARD              0x6897		# FASTFORWARD
+          KEY_PAUSE                    0x0AF5		# PAUSE
+          KEY_P                        0x906F		# PLAYMODE
+          KEY_ARCHIVE                  0x1AE5		# FILELIST
+          KEY_CLOSE                    0xF20D		# USB
+          KEY_STOP                     0x58A7		# STOP
+          KEY_SLOW                     0xEA15		# SLOW
+          KEY_PREVIOUS                 0x708F		# PREV
+          KEY_NEXT                     0xA857		# NEXT
+          KEY_F                        0x6897		# FAST
+          end codes
+
+end remote
+
+begin remote
+
+  name  SPARK(default)
+  bits           16
+  flags SPACE_ENC|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  header       9129  4358
+  one           681  1561
+  zero          681   444
+  ptrail        675
+  repeat       9130  2135
+  pre_data_bits   16
+  pre_data       0xA25D
+  gap          107653
+  toggle_bit_mask 0x0
+
+      begin codes
+          KEY_POWER                0x7887 		# POWER
+          KEY_VIDEO                0xF00F		# V.Format
+          KEY_AUX                  0xD02F		# TV/SAT
+          KEY_TIME                 0x9A65		# SLEEP
+          KEY_MUTE                 0x5AA5		# MUTE
+          KEY_1                    0x58A7		# 1BUTTON
+          KEY_2                    0xF807		# 2BUTTON
+          KEY_3                    0x1AE5		# 3BUTTON
+          KEY_4                    0x6897		# 4BUTTON
+          KEY_5                    0xD827		# 5BUTTON
+          KEY_6                    0x2AD5		# 6BUTTON
+          KEY_7                    0x48B7		# 7BUTTON
+          KEY_8                    0xE817		# 8BUTTON
+          KEY_9                    0x0AF5		# 9BUTTON
+          KEY_TV2                  0x32CD		# TV/RADIO
+          KEY_0                    0xC837		# 0BUTTON
+          KEY_BACK                 0x30CF		# RECALL
+          KEY_PAGEUP               0x12ED		# P+
+          KEY_PAGEDOWN             0x22DD		# P-
+          KEY_FIND                 0x3AC5		# FIND
+          KEY_ARCHIVE              0x9867		# FOLDER
+          KEY_VOLUMEUP             0x50AF		# V+
+          KEY_VOLUMEDOWN           0x609F		# V-
+          KEY_MENU                 0x38C7		# MENU
+          KEY_INFO                 0xE01F		# INFO
+          KEY_UP                   0xC03F		# UP
+          KEY_DOWN                 0x7A85		# DOWN
+          KEY_LEFT                 0x40BF		# LEFT
+          KEY_RIGHT                0x02FD		# RIGHT
+          KEY_OK                   0xFA05		# OK
+          KEY_HOME                 0x06F9		# EXIT
+          KEY_EPG                  0xBA45		# EPG
+          KEY_FAVORITES            0xC23D		# FAV
+          KEY_SAT                  0xF20D		# SAT
+          KEY_TITLE                0xDA25		# PORTAL
+          KEY_RED                  0x926D		# RED
+          KEY_GREEN                0x728D		# GREEN
+          KEY_YELLOW               0x8877		# YELLOW
+          KEY_BLUE                 0x52AD		# BLUE
+          KEY_RECORD               0x08F7		# RECORD
+          KEY_STOP                 0x44BB		# STOP
+          KEY_PAUSE                0xB24D		# PAUSE
+          KEY_PLAY                 0xA857		# PLAY
+          KEY_PREVIOUS             0x04FB		# PREV
+          KEY_NEXT                 0xC43B		# NEXT
+          KEY_FASTFORWARD          0xCA35		# FASTFORWARD
+          KEY_REWIND               0x807F		# REWIND
+          KEY_SLOW                 0x847B		# SLOW
+          KEY_F                    0x18E7		# FAST
+          KEY_P                    0x4AB5		# PLAY_MODE
+          KEY_CLOSE                0x20DF  		# USB
+          KEY_T                    0xAA55		# TimeShift
+          KEY_HELP                 0x6A95		# F1
+          KEY_F2                   0xEA15		# F2
+          KEY_F3                   0x28D7		# F3
+      end codes
+
+end remote
+

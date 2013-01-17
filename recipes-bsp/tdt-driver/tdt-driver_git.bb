@@ -1,4 +1,4 @@
 require tdt-driver.inc
-SUMMARY = "Driver modules from TDT"
+SUMMARY = "Driver modules from  ARP"
 
 
