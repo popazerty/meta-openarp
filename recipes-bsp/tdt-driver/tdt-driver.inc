@@ -1,4 +1,4 @@
-HOMEPAGE = "http://gitorious.org/open-duckbox-project-sh4"
+HOMEPAGE = "http://code.google.com/p/tdt-amiko/"
 SECTION = "kernel/modules"
 RDEPENDS = "ustslave"
 
@@ -7,20 +7,20 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882b
 
 inherit module
 
-PR = "r11"
+PR = "r1"
 
-SRCREV = "54b4849686bcc6a8834c1ed3f3e92994ba1e9d2a"
+SRCREV = "18ad9ec6051dc5730822d38f1fc85f67c989c31f"
 
 # using seifes tdt drivers because this has less overhead
 SRC_URI = " \
-	git://gitorious.org/neutrino-mp/tdt-driver.git \
+	git://code.google.com/p/arp-driver.git;protocol=http;branch=master \
         file://COPYING \
         file://aotom_udev.rules \
 	file://${MACHINE}/tdt-driver_load.conf \
         file://${MACHINE}/tdt-driver_options.conf \
 " 
 
-PV = "0.1+git${SRCPV}"
+PV = "0.1+gitr${SRCPV}"
 
 
 S = "${WORKDIR}/git"
