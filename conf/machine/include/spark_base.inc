@@ -21,7 +21,6 @@ PREFERRED_VERSION_glibc-nativesdk         ?= "2.10"
 PREFERRED_VERSION_glibc-initial           ?= "${GLIBCVERSION}"
 PREFERRED_VERSION_glibc-initial-nativesdk ?= "2.10"
 
-
 USE_VT = "0"
 MACHINE_FEATURES = "kernel26 ext2 alsa usbhost serial"
 
@@ -43,8 +42,8 @@ INITRAMFS_FSTYPES = "ext2.gz spark-updt"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "stlinux24-sh4-stx7111-fdma-firmware \
 	                             stlinux24-sh4-stmfb-firmware-stx7111 \
                                      u-boot-fw-utils \
-				     tdt-driver \
                                      stslave-fw \
+				     lirc \
 				     fp-control stfbcontrol ustslave \
 "
 
