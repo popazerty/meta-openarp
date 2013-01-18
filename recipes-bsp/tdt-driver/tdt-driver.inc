@@ -9,7 +9,7 @@ inherit module
 
 PR = "r1"
 
-SRCREV = "18ad9ec6051dc5730822d38f1fc85f67c989c31f"
+SRCREV = "218d7830294f4362d0849c424a10ccf19df1106f"
 
 # using seifes tdt drivers because this has less overhead
 SRC_URI = " \
