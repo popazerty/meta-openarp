@@ -35,32 +35,20 @@ file://linux-sh4-spark_setup_stm24_${STM_PATCH_STR}_multi_yaffs2.patch;patch=1 \
 file://linux-sh4-cifs-unaligned-mem-access-kernel_stm24.patch;patch=1 \
 file://linux-sh4-linux_yaffs2_stm24_${STM_PATCH_STR}.patch;patch=1 \
 file://linux-sh4-lirc_stm24_${STM_PATCH_STR}.patch;patch=1 \
+file://0001-added-pm_power_off-hoock-for-machine_halt.patch;patch=1 \
 file://${MACHINE}_defconfig \
 file://st-coprocessor.h \
 "
 
 
-#KERNEL_DEFCONFIG = "mb618_defconfig"
+COMPATIBLE_MACHINE = "spark|spark7162"
 
-COMPATIBLE_MACHINE = "spark"
-
-# Functionality flags
-#KERNEL_FEATURES = "features/netfilter"
-#KERNEL_FEATURES_append = " features/taskstats"
 PARALLEL_MAKEINST = ""
 
 # CMDLINE for spark
 CMDLINE_spark = "console=ttyAMA0,115200 rootfstype=ext4 rootwait"
 
 S = "${WORKDIR}/git"
-
-#FILES_${PN}-dev = ""
-
-#do_configure_prepend() {
-#	install -m 0644 ${WORKDIR}/${MACHINE}_defconfig ${WORKDIR}/defconfig || die "No default configuration for ${MACHINE} / ${KERNEL_DEFCONFIG} available."
-#	oe_machinstall -m 0644 ${WORKDIR}/${MACHINE}_defconfig ${WORKDIR}/defconfig 
-#        oe_runmake oldconfig
-#}
 
 do_configure() {
 	rm -f ${S}/.config || true
@@ -69,7 +57,7 @@ do_configure() {
 }
 
 do_install_append() {
-	kerneldir=${STAGING_KERNEL_DIR}
+	kerneldir=${D}${KERNEL_SRC_PATH}
 	if [ -f include/linux/bounds.h ]; then
 		mkdir -p $kerneldir/include/linux
                 cp include/linux/bounds.h $kerneldir/include/linux/bounds.h
@@ -83,4 +71,5 @@ do_install_append() {
 }
 
 
+FILES_kernel-dev += "${includedir}/linux"
 
