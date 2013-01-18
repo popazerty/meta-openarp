@@ -4,16 +4,16 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 DEPENDS = "tdt-driver"
 
-PR = "r3"
+PR = "r1"
 
-SRCREV = "f5159041295774ef5bbb338c7f5d831bc2620d03"
+SRCREV = "18ad9ec6051dc5730822d38f1fc85f67c989c31f"
 
 SRC_URI = " \
-	git://gitorious.org/open-duckbox-project-sh4/tdt.git \
+	git://code.google.com/p/arp-driver.git;protocol=http;branch=master \
 "
 PV = "0.1+git${SRCPV}"
 
-S = "${WORKDIR}/git/tdt/cvs/apps/misc/tools"
+S = "${WORKDIR}/git"
 
 inherit autotools 
 

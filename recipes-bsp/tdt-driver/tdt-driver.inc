@@ -13,7 +13,7 @@ SRCREV = "18ad9ec6051dc5730822d38f1fc85f67c989c31f"
 
 # using seifes tdt drivers because this has less overhead
 SRC_URI = " \
-	git://code.google.com/p/arp-driver.git;protocol=http;branch=master \
+	git://code.google.com/p/arp-driver;protocol=http;branch=master \
         file://COPYING \
         file://aotom_udev.rules \
 	file://${MACHINE}/tdt-driver_load.conf \
@@ -38,18 +38,18 @@ do_configure_prepend () {
 	if [ -L player2 ]; then
                 rm player2
         fi
-	if [ -L stgfb/stmfb ]; then
-                rm stgfb/stmfb
+	if [ -L stgfb ]; then
+                rm stgfb
         fi
 	if [ -L multicom ]; then
                 rm multicom 
         fi
-	ln -s ${S}/include/stmfb-3.1_stm24_0102 ${S}/include/stmfb
+	ln -s ${S}/include/stmfb-3.1_stm24_0104 ${S}/include/stmfb
 	ln -s ${S}/include/player2_179 ${S}/include/player2
 	ln -s ${S}/multicom-3.2.4/include ${S}/include/multicom
 	ln -s ${S}/player2_191 ${S}/player2
 	ln -s ${S}/multicom-3.2.4 ${S}/multicom
-	ln -s ${S}/stgfb/stmfb-3.1_stm24_0102 ${S}/stgfb/stmfb
+	ln -s ${S}/stmfb-3.1_stm24_0104 ${S}/stgfb
 	rm -f .config 
         printf "export CONFIG_PLAYER_191=y\nexport CONFIG_MULTICOM324=y\n" > .config
 	# disable wireless build
@@ -105,7 +105,7 @@ do_install() {
 	install -m 644 bpamem/bpamem.h ${D}/${includedir}
  	install -m 644 frontcontroller/aotom/aotom_main.h ${D}/${includedir}
  	install -m 644 player2/linux/include/linux/dvb/stm_ioctls.h ${D}/${includedir}/linux/dvb
- 	install -m 644 stgfb/stmfb/linux/drivers/video/stmfb.h ${D}/${includedir}/linux
+ 	install -m 644 stgfb/linux/drivers/video/stmfb.h ${D}/${includedir}/linux
 
 	#install modutils config
 	install -d ${D}/${sysconfdir}/modules-load.d
