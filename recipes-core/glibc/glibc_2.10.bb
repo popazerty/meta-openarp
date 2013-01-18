@@ -1,6 +1,6 @@
 require glibc.inc
 
-SRCREV = "3e94272e370a13e6e1754fde578b2c44165ebcaa"
+SRCREV = "1e6f87f7e493d69e853397ca42a3245bf00e1004"
 PV = "2.10"
 
 DEPENDS += "gperf-native"
@@ -8,7 +8,7 @@ PR = "r1"
 PR_append = "+git${SRCPV}"
 FILESPATHPKG =. "glibc-git:"
 
-GLIBC_BRANCH = "stlinux2.4-glibc-2.10.2-34"
+GLIBC_BRANCH = "stlinux2.4-glibc-2.10.2-37"
 GLIBC_PORTS_VER = "2.10.2"
 
 SRC_URI = " \
