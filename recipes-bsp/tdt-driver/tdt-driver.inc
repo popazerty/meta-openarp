@@ -15,6 +15,7 @@ SRCREV = "218d7830294f4362d0849c424a10ccf19df1106f"
 # using seifes tdt drivers because this has less overhead
 SRC_URI = " \
 	git://code.google.com/p/arp-driver;protocol=http;branch=master \
+	file://0001-added-pm_power_off-registration.patch;patch=1 \
         file://COPYING \
         file://aotom_udev.rules \
 	file://${MACHINE}/tdt-driver_load.conf \
